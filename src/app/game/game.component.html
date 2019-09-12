@@ -1,0 +1,20 @@
+<div class="title">Angular 6 做菜小游戏</div>
+<div class="container">
+
+  <form>
+
+    <div class="row">
+      <div>请输入蔬菜的名字：</div>
+      <input type="text" name="Vname" placeholder="蔬菜" [(ngModel)]="vege">
+      <br>
+      <div>请输入肉类的名字：</div>
+      <input type="text" name="Vname" placeholder="肉类" [(ngModel)]="meat">
+    </div>
+    <div class="row2">
+      <button class="btn1" (click)="onSubmit()" >提交</button>
+      <button class="btn2" (click)="reset()" >清除</button>
+    </div>
+    <div *ngIf="isSubmit" class="result">{{vege}} 炒 {{meat}}</div>
+    <div *ngIf="isError" class="error">材料不对</div>
+  </form>
+</div>
